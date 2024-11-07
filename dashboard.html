@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Dashboard</h2>
+    <div class="dashboard-cards">
+        <div class="card">
+            <h3>Today's Total</h3>
+            <p>₹{{ today_total }}</p>
+        </div>
+        <div class="card">
+            <h3>Yesterday's Total</h3>
+            <p>₹{{ yesterday_total }}</p>
+        </div>
+        <div class="card">
+            <h3>This Year's Total</h3>
+            <p>₹{{ yearly_total }}</p>
+        </div>
+        <div class="card">
+            <h3>Overall Total</h3>
+            <p>₹{{ overall_total }}</p>
+        </div>
+    </div>
+{% endblock %}

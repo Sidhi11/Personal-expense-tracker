@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='1.js') }}">
+			
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 222.2 84% 4.9%;
+--card: 0 0% 100%;
+--card-foreground: 222.2 84% 4.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 222.2 84% 4.9%;
+--primary: 221.2 83.2% 53.3%;
+--primary-foreground: 210 40% 98%;
+--secondary: 210 40% 96.1%;
+--secondary-foreground: 222.2 47.4% 11.2%;
+--muted: 210 40% 96.1%;
+--muted-foreground: 215.4 16.3% 46.9%;
+--accent: 210 40% 96.1%;
+--accent-foreground: 222.2 47.4% 11.2%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 210 40% 98%;
+--border: 214.3 31.8% 91.4%;
+--input: 214.3 31.8% 91.4%;
+--ring: 221.2 83.2% 53.3%;
+				}
+				.dark {
+					--background: 222.2 84% 4.9%;
+--foreground: 210 40% 98%;
+--card: 222.2 84% 4.9%;
+--card-foreground: 210 40% 98%;
+--popover: 222.2 84% 4.9%;
+--popover-foreground: 210 40% 98%;
+--primary: 217.2 91.2% 59.8%;
+--primary-foreground: 222.2 47.4% 11.2%;
+--secondary: 217.2 32.6% 17.5%;
+--secondary-foreground: 210 40% 98%;
+--muted: 217.2 32.6% 17.5%;
+--muted-foreground: 215 20.2% 65.1%;
+--accent: 217.2 32.6% 17.5%;
+--accent-foreground: 210 40% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 210 40% 98%;
+--border: 217.2 32.6% 17.5%;
+--input: 217.2 32.6% 17.5%;
+--ring: 224.3 76.3% 48%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="flex items-center justify-center min-h-screen bg-background">
+  <div class="bg-card p-10 rounded-xl shadow-xl w-96 transition-transform transform hover:scale-105">
+    <h2 class="text-4xl font-extrabold text-foreground mb-6 text-center">Welcome Back</h2>
+    <p class="text-muted-foreground mb-8 text-center">Access your account with your credentials.</p>
+    <form class="flex flex-col items-center" method="POST">
+      <div class="mb-6 w-full">
+        <input type="text" placeholder="Username" name="username" class="w-full p-4 border border-border rounded-lg focus:outline-none focus:ring focus:ring-ring transition duration-200 placeholder:text-muted-foreground" required />
+      </div>
+      <div class="mb-6 w-full">
+        <input type="password" placeholder="Password" name="password" class="w-full p-4 border border-border rounded-lg focus:outline-none focus:ring focus:ring-ring transition duration-200 placeholder:text-muted-foreground" required />
+      </div>
+      <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 w-full p-4 rounded-lg transition duration-200 font-semibold shadow-md">Log In</button>
+    </form>
+    <p class="mt-6 text-center text-muted-foreground">
+      <a href="/register" class="text-black hover:underline">Register</a>
+    </p>
+  </div>
+</div>
+
+  </body>
+</html>
